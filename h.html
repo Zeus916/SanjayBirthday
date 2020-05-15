@@ -85,13 +85,14 @@
       @media screen and (max-width: 800px) { .svg-thing { text-shadow: none; }}
 
     </style>
-  
+        
   </head>
   <body>
+    
     <svg xmlns="http://www.w3.org/2000/svg" class="svg-bg">
     </svg>
     <div class="content">
-      <img class="portrait" src="./img/sanjay1.JPG">
+      <img class="portrait" src="./img/sanjay1.JPG" id="profile-pic">
       <h1 class="header" style="color:white"><span class="darker-color" style="color:white">Happy Birthday </span>Sanjay !!</h1>
       <h3 class="subheader">The Man. The Swag. The Legend.</h3>
       
@@ -156,6 +157,22 @@
       </table>
       
     </div>
+    <audio class="song" id="aud" loops controls hidden>
+      <source src="./media/happy_birthday.mp3">
+      </audio>
+    
+    <script src="./scripts/jquery.min.js"></script> 
+    <script>
+   alert("Click on Profile Pic to enjoy Music 🎶🎵");
+   // var x = document.getElementById("aud"); 
+   // x.play()
+        $('.portrait').click(function(){
+          console.log("clicked")
+          var audio = $('.song');
+          audio.play();        
+        });      
+      
+   </script>
 
     <script>
 const $ = document.querySelector.bind(document);
